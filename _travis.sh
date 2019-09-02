@@ -1,9 +1,3 @@
-#--------------------------------------------
-#!/bin/bash
-# author：shenliyang
-# website：https://github.com/shenliyang
-# slogan：梦想还是要有的，万一实现了呢。
-#--------------------------------------------
 
 #定义时间
 time=`date +%Y-%m-%d\ %H:%M:%S`
@@ -52,14 +46,14 @@ EOF
   # Github Pages
   git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
   # Gitee Pages
-  git push --force --quiet "https://shenliyang:${GITEE_TOKEN}@${GITEE_REF}" master:master
+  git push --force --quiet "https://Lee981265:${GITEE_TOKEN}@${GITEE_REF}" master:master
 
   # Create Tag
   git tag v1.2.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
   # Github Pages
   git push --quiet "https://${GH_TOKEN}@${GH_REF}" master:master --tags
   # Gitee Pages
-  git push --quiet "https://shenliyang:${GITEE_TOKEN}@${GITEE_REF}" master:master --tags
+  git push --quiet "https://Lee981265:${GITEE_TOKEN}@${GITEE_REF}" master:master --tags
 }
 
 case $1 in
